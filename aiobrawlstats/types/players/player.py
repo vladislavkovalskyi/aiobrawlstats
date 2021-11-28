@@ -2,7 +2,7 @@ from typing import Optional, List
 
 from pydantic import BaseModel, Field
 
-from aiobrawlstats.types.players import BrawlerStat
+from aiobrawlstats.types.brawlers.brawler import BrawlerStat
 
 
 class PlayerClub(BaseModel):
