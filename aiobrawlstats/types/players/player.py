@@ -32,6 +32,6 @@ class Player(BaseModel):
     best_robo_rumble_time: Optional[int] = Field(alias="bestRoboRumbleTime")
     best_time_as_big_brawler: Optional[int] = Field(alias="bestTimeAsBigBrawler")
 
-    club: Optional[PlayerClub]
-    icon: Optional[PlayerIcon]
-    brawlers: List[BrawlerStat]
+    club: Optional[PlayerClub] = None
+    icon: Optional[PlayerIcon] = None
+    brawlers: List[BrawlerStat] = None
