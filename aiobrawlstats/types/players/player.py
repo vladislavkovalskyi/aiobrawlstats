@@ -2,7 +2,7 @@ from typing import Optional, List
 
 from pydantic import BaseModel, Field
 
-from aiobrawlstats.types.player import BrawlerStat
+from aiobrawlstats.types.players import BrawlerStat
 
 
 class PlayerClub(BaseModel):
@@ -23,7 +23,9 @@ class Player(BaseModel):
     highest_trophies: Optional[int] = Field(alias="highestTrophies")
     exp_level: Optional[int] = Field(alias="expLevel")
     exp_points: Optional[int] = Field(alias="expPoints")
-    is_qualified_from_championship_challenge: Optional[bool] = Field(alias="isQualifiedFromChampionshipChallenge")
+    is_qualified_from_championship_challenge: Optional[bool] = Field(
+        alias="isQualifiedFromChampionshipChallenge"
+    )
     solo_victories: Optional[int] = Field(alias="soloVictories")
     duo_victories: Optional[int] = Field(alias="duoVictories")
     trio_victories: Optional[int] = Field(alias="3vs3Victories")

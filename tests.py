@@ -2,7 +2,7 @@ import asyncio
 from pprint import pprint
 
 from aiobrawlstats import Client
-from aiobrawlstats.types.player_battlelog.battle import Battle, BattleLog
+from aiobrawlstats.types.players.player_battlelog import BattleLog
 
 TOKEN = ""
 
@@ -15,6 +15,7 @@ async def app():
     player_battles_info = await client.get_battle("22LRPLGRY")
     pprint(player_battles_info)
     pprint(BattleLog(**player_battles_info), sort_dicts=False)
+
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(app())
